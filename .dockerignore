@@ -1,0 +1,17 @@
+.idea
+.vscode
+.DS_Store
+.husky
+.scannerwork
+coverage
+docs
+node_modules
+reports
+
+.dockerignore
+.editorconfig
+.gitignore
+docker-compose.yml
+Dockerfile*
+*.md
+*.txt

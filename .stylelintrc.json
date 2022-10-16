@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "ignoreFiles": ["./src/styles/bootstrap-*"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "block-no-empty": null,
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }]
+  }
+}
