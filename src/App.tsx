@@ -8,6 +8,7 @@ import FourOhFour from './pages/FourOhFour';
 import AppRoutes from './@enums/AppRoutes';
 import Counter from './pages/Counter';
 import Users from './pages/Users';
+import NotificationsDemo from './pages/NotificationsDemo';
 
 const App: FC = () => {
   return (
@@ -27,8 +28,11 @@ const App: FC = () => {
                 <li className="nav-item me-2">
                   <Link to={AppRoutes.Home}>Home</Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item me-2">
                   <Link to={AppRoutes.Users}>Users</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={AppRoutes.Notifications}>Notifications</Link>
                 </li>
               </ul>
             </div>
@@ -38,6 +42,7 @@ const App: FC = () => {
       <div className="row">
         <Routes>
           <Route path={AppRoutes.Users} element={<Users />} />
+          <Route path={AppRoutes.Notifications} element={<NotificationsDemo />} />
           <Route path={AppRoutes.Home} element={<Counter />} errorElement={<FourOhFour />} />
         </Routes>
       </div>
