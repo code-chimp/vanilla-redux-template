@@ -2,27 +2,27 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import configureMockStore, { MockStore } from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import IAlert from '../../../@interfaces/IAlert';
-import AlertTypes from '../../../@enums/AlertTypes';
-import AppAlerts from './AppAlerts';
+import IToastMessage from '../../../@interfaces/IToastMessage';
+import ToastTypes from '../../../@enums/ToastTypes';
+import AppToasts from './AppToasts';
 
 const mockStore = configureMockStore([]);
 let store: MockStore;
 
-const initialState: Array<IAlert> = [
+const initialState: Array<IToastMessage> = [
   {
     id: 'foo',
     text: 'batten down the hatches',
-    type: AlertTypes.Warning,
+    type: ToastTypes.Warning,
   },
 ];
 
-describe('components / app / AppAlerts', () => {
+describe('components / app / AppToasts', () => {
   it('should match the snapshot', () => {
-    store = mockStore({ alerts: initialState });
+    store = mockStore({ toasts: initialState });
     const { asFragment } = render(
       <Provider store={store}>
-        <AppAlerts />
+        <AppToasts />
       </Provider>
     );
 
