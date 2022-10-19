@@ -13,7 +13,7 @@ const AppAlerts: FC = () => {
     <div className={styles.wrapper}>
       <div className={styles.alertsCol}>
         <TransitionGroup>
-          {alerts.map((alert: IAlert, index: number) => (
+          {alerts.map((alert: IAlert) => (
             <Alert key={alert.id} alert={alert} />
           ))}
         </TransitionGroup>
