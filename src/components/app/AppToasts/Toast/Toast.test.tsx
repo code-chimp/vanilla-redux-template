@@ -38,7 +38,7 @@ describe('components / app / AppToasts / Toast', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <Toast toastMessage={initialState[0]} />
-      </Provider>
+      </Provider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -51,7 +51,7 @@ describe('components / app / AppToasts / Toast', () => {
     render(
       <Provider store={store}>
         <Toast toastMessage={target} />
-      </Provider>
+      </Provider>,
     );
 
     const body = screen.getByTestId(`toast-${target.id}-body`);
@@ -67,7 +67,7 @@ describe('components / app / AppToasts / Toast', () => {
     render(
       <Provider store={store}>
         <Toast toastMessage={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`toast-${target.id}-icon`);
@@ -90,7 +90,7 @@ describe('components / app / AppToasts / Toast', () => {
     render(
       <Provider store={store}>
         <Toast toastMessage={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`toast-${target.id}-icon`);
@@ -113,7 +113,7 @@ describe('components / app / AppToasts / Toast', () => {
     render(
       <Provider store={store}>
         <Toast toastMessage={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`toast-${target.id}-icon`);
@@ -137,7 +137,7 @@ describe('components / app / AppToasts / Toast', () => {
     render(
       <Provider store={store}>
         <Toast toastMessage={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`toast-${target.id}-icon`);
@@ -160,7 +160,7 @@ describe('components / app / AppToasts / Toast', () => {
     render(
       <Provider store={store}>
         <Toast toastMessage={target} />
-      </Provider>
+      </Provider>,
     );
     // const expected = [
     //   {

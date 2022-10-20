@@ -23,7 +23,7 @@ describe('components / app / AppAlerts', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <AppAlerts />
-      </Provider>
+      </Provider>,
     );
 
     expect(asFragment()).toMatchSnapshot();

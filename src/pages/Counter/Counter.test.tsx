@@ -17,7 +17,7 @@ function getComponent(initialState: number): () => DocumentFragment {
   const { asFragment } = render(
     <Provider store={store}>
       <Counter />
-    </Provider>
+    </Provider>,
   );
 
   return asFragment;

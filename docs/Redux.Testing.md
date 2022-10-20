@@ -134,7 +134,7 @@ describe('store / slices / user', () => {
         // we can also peel the success action out so that we can verify
         //  its payload is what we expect
         const fulfilledAction = receivedActions.find(
-          action => action.type === loadUsers.fulfilled.type
+          action => action.type === loadUsers.fulfilled.type,
         );
 
         expect(receivedTypes).toEqual(expectedTypes);
@@ -154,7 +154,7 @@ describe('store / slices / user', () => {
         const receivedActions = store.getActions();
         const receivedTypes = receivedActions.map(action => action.type);
         const errorAction = receivedActions.find(
-          action => action.type === loadUsers.rejected.type
+          action => action.type === loadUsers.rejected.type,
         );
 
         expect(receivedTypes).toEqual(expectedTypes);
@@ -205,7 +205,7 @@ function getComponent(initialState: number): () => DocumentFragment {
   const { asFragment } = render(
     <Provider store={store}>
       <Counter />
-    </Provider>
+    </Provider>,
   );
 
   return asFragment;
@@ -282,7 +282,7 @@ describe('components / Users', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -296,7 +296,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const spinnerText = component.getByText('Loading...');
@@ -314,7 +314,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const spinnerText = screen.getByText('Loading...');
@@ -336,7 +336,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const error = screen.getByTestId('error-indicator');
@@ -372,7 +372,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const rows = screen.querySelectorAll('[data-row-key]');

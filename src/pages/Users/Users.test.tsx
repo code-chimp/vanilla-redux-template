@@ -19,7 +19,7 @@ describe('components / Users', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -33,7 +33,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const loading = screen.getByTestId('loading-indicator');
@@ -51,7 +51,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const loading = screen.getByTestId('loading-indicator');
@@ -73,7 +73,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const error = screen.getByTestId('error-indicator');
@@ -109,7 +109,7 @@ describe('components / Users', () => {
     render(
       <Provider store={store}>
         <Users />
-      </Provider>
+      </Provider>,
     );
 
     const row1 = screen.getByTestId('row_1');

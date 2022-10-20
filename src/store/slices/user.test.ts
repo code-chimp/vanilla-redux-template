@@ -116,7 +116,7 @@ describe('store / slices / user', () => {
         const receivedActions = store.getActions();
         const receivedTypes = receivedActions.map(action => action.type);
         const fulfilledAction = receivedActions.find(
-          action => action.type === loadUsers.fulfilled.type
+          action => action.type === loadUsers.fulfilled.type,
         );
 
         expect(receivedTypes).toEqual(expectedTypes);
@@ -136,7 +136,7 @@ describe('store / slices / user', () => {
         const receivedActions = store.getActions();
         const receivedTypes = receivedActions.map(action => action.type);
         const errorAction = receivedActions.find(
-          action => action.type === loadUsers.rejected.type
+          action => action.type === loadUsers.rejected.type,
         );
 
         expect(receivedTypes).toEqual(expectedTypes);

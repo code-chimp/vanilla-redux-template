@@ -27,7 +27,7 @@ export const loadUsers = createAsyncThunk(
     } catch (e: any) {
       return rejectWithValue(e.message || 'Internal Server Error');
     }
-  }
+  },
 );
 
 export const user = createSlice({
@@ -61,7 +61,7 @@ export const user = createSlice({
         state.users = payload ? (payload as Array<IUser>) : [];
         // or you could make it an additive operation
         // state.users = [...state.users, ...(action.payload as Array<IUser>)];
-      }
+      },
     );
 
     builder.addCase(loadUsers.rejected, (state: IUserSlice, action: any) => {

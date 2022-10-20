@@ -65,10 +65,10 @@ export const loadUsers = createAsyncThunk(
       return await fetchUsers();
     } catch (e) {
       return rejectWithValue(
-        e.response?.data?.message || e.message || 'Internal Server Error'
+        e.response?.data?.message || e.message || 'Internal Server Error',
       );
     }
-  }
+  },
 );
 
 /* ... */
@@ -151,7 +151,7 @@ export const user = createSlice({
       (state: IUserSlice, action: PayloadAction<Array<IUser> | undefined>) => {
         state.status = AsyncStates.Success;
         state.users = [...state.users, ...(action.payload as Array<IUser>)];
-      }
+      },
     );
 
     // 'users/fetchUsers/rejected'
@@ -207,10 +207,10 @@ export const loadUsers = createAsyncThunk(
       return await fetchUsers();
     } catch (e) {
       return rejectWithValue(
-        e.response?.data?.message || e.message || 'Internal Server Error'
+        e.response?.data?.message || e.message || 'Internal Server Error',
       );
     }
-  }
+  },
 );
 
 export const user = createSlice({
@@ -242,7 +242,7 @@ export const user = createSlice({
       (state: IUserSlice, action: PayloadAction<Array<IUser> | undefined>) => {
         state.status = AsyncStates.Success;
         state.users = [...state.users, ...(action.payload as Array<IUser>)];
-      }
+      },
     );
 
     builder.addCase(loadUsers.rejected, (state: IUserSlice, action) => {

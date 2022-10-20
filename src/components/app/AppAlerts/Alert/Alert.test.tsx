@@ -45,7 +45,7 @@ describe('components / app / AppAlerts / Alert', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <Alert alert={initialState[0]} />
-      </Provider>
+      </Provider>,
     );
 
     expect(asFragment()).toMatchSnapshot();
@@ -58,7 +58,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
 
     const text = screen.getByTestId(`alert-${target.id}-text`);
@@ -77,7 +77,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
 
     const text = screen.getByTestId(`alert-${target.id}-text`);
@@ -95,7 +95,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`alert-${target.id}-icon`);
@@ -111,7 +111,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`alert-${target.id}-icon`);
@@ -127,7 +127,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`alert-${target.id}-icon`);
@@ -144,7 +144,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`alert-${target.id}-icon`);
@@ -161,7 +161,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
 
     const icon = screen.getByTestId(`alert-${target.id}-icon`);
@@ -177,7 +177,7 @@ describe('components / app / AppAlerts / Alert', () => {
     render(
       <Provider store={store}>
         <Alert alert={target} />
-      </Provider>
+      </Provider>,
     );
     // const expected = [
     //   {

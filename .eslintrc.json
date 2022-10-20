@@ -1,6 +1,6 @@
 {
   "plugins": ["react-hooks", "jsx-a11y"],
-  "extends": ["react-app", "react-app/jest", "plugin:jsx-a11y/recommended"],
+  "extends": ["react-app", "react-app/jest", "plugin:jsx-a11y/recommended", "prettier"],
   "rules": {
     "no-magic-numbers": [2, { "ignore": [-1, 0, 1, 2, 10, 100, 1000] }]
   },
