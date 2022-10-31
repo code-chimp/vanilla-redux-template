@@ -12,6 +12,17 @@ Features:
   [Jest][jst] powered by [Husky][hus] pre-commit hooks
 - [Documentation!](docs/README.md)
 
+## Usage
+
+The easiest way to get started with this template is to clone it with [Degit][dgt]:
+
+```shell
+npx degit code-chimp/vanilla-redux-template new-redux-project
+cd new-redux-project
+yarn
+npx npm-check-updates
+```
+
 ## NOTE:
 
 Feel free to use this as a basis for your own project but you may want to run `npx npm-check-updates` to ensure you are
@@ -27,3 +38,4 @@ security warnings.
 [sty]: https://stylelint.io/ 'A mighty, modern linter that helps you avoid errors and enforce conventions in your styles'
 [jst]: https://jestjs.io/ 'Delightful JavaScript testing'
 [hus]: https://typicode.github.io/husky/#/ 'Modern git hooks made easy'
+[dgt]: https://github.com/Rich-Harris/degit 'straightforward project scaffolding'
